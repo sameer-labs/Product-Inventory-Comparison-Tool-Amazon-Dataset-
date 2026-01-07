@@ -64,7 +64,7 @@ This script creates two inventory snapshots from a single CSV file by:
 - Removing some products
 - Adding a small number of new products
 
-This simulates real inventory changes over time and makes the comparison process reproducible.
+This simulates real inventory changes over time, making the comparison process reproducible.
 
 ### compare_inventory.py
 This script compares two inventory snapshots and:
@@ -82,4 +82,5 @@ This script compares two inventory snapshots and:
    ```bash
    python make_inventory_snapshots.py
 3. Run the comparison:
-python compare_inventory.py
+   ```bash
+   python compare_inventory.py
