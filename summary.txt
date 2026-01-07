@@ -1,0 +1,6 @@
+INVENTORY CHANGE SUMMARY
+==============================
+
+Products added: 20
+Products removed: 72
+Price changes: 195
