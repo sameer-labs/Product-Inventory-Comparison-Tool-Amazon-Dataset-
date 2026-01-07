@@ -38,4 +38,48 @@ Since real-world comparison datasets are rarely provided in multiple versions, a
 
 ## Project Structure
 
+CSV Comparison Tool/
+│
+├── data/
+│ ├── inventory_day1.csv
+│ └── inventory_day2.csv
+│
+├── output/
+│ ├── inventory_changes.csv
+│ └── summary.txt
+│
+├── make_inventory_snapshots.py
+├── compare_inventory.py
+├── README.md
+└── .gitignore
 
+
+---
+
+## Scripts
+
+### make_inventory_snapshots.py
+This script creates two inventory snapshots from a single CSV file by:
+- Modifying prices for a subset of products
+- Removing some products
+- Adding a small number of new products
+
+This simulates real inventory changes over time and makes the comparison process reproducible.
+
+### compare_inventory.py
+This script compares two inventory snapshots and:
+- Identifies added and removed products
+- Detects price changes
+- Outputs a detailed CSV change log
+- Generates a plain-text summary of changes
+
+---
+
+## How to Run
+
+1. Place the source inventory CSV inside the `data/` directory.
+2. Generate inventory snapshots:
+   ```bash
+   python make_inventory_snapshots.py
+3. Run the comparison:
+python compare_inventory.py
